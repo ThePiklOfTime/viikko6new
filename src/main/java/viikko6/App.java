@@ -1,9 +1,7 @@
 package viikko6;
-
-import java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.HashMap;
+
 
 /**
  * Hello world!
@@ -25,26 +23,32 @@ public class App
                 
             switch (i) {
                 case 1:
-                    System.out.println("Minkä soittimen haluat lisätä? 1) Kitara 2) Viulu 3) Rummut");
+                    System.out.println("Minkä soittimen haluat lisätä? 1) Kitara, 2) Viulu, 3) Rummut");
                     if(scanner.hasNext()){
                         int j = Integer.parseInt(scanner.nextLine());
                         System.out.println("Anna valmistajan nimi:");
                         String manufacturer = scanner.nextLine();
                         System.out.println("Anna hinta euroina:");
                         int price = Integer.parseInt(scanner.nextLine());
+
+                        Instrument newInstrument = null;
                         switch (j) {
                             case 1:
-                                instruments.add(new Guitar(manufacturer, price));
+                                newInstrument = new Guitar(manufacturer, price);
                                 break;
                             case 2:
-                                instruments.add(new Violin(manufacturer, price));
+                                newInstrument = new Violin(manufacturer, price);
                                 break;
                             case 3:
-                                instruments.add(new Drum(manufacturer, price));
+                                newInstrument = new Drum(manufacturer, price);
                                 break;
                             default:
                                 System.out.println("Syöte oli väärä");
                                 break;
+                        }
+                        if (newInstrument != null) {
+                            instruments.add(newInstrument);
+                            System.out.println("Soitin lisätty listaan");
                         }
                     }       
                     break;
