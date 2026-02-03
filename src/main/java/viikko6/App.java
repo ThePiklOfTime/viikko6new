@@ -48,7 +48,7 @@ public class App
                         }
                         if (newInstrument != null) {
                             instruments.add(newInstrument);
-                            System.out.println("Soitin lisätty listaan");
+                            System.out.println("Soitin lisätty listaan!");
                         }
                     }       
                     break;
