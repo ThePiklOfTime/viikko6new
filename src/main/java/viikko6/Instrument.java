@@ -8,4 +8,7 @@ public class Instrument {
         this.manufacturer = manufacturer;
         this.price = price;
     }
+    public String getDetails() {
+        return "Valmistaja: " + this.manufacturer + ", Hinta: " + this.price + "e";
+    }
 }

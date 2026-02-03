@@ -7,4 +7,8 @@ public class StringInstrument extends Instrument {
         super(manufacturer, price);
         this.numberOfStrings = numberOfStrings;
     }
+
+    public void tune() {
+        System.out.println(this.manufacturer + " soittimesta viritettiin " + this.numberOfStrings + " kieltä.");
+    }
 }
