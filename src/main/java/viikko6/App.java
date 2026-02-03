@@ -43,7 +43,7 @@ public class App
                                 newInstrument = new Drum(manufacturer, price);
                                 break;
                             default:
-                                System.out.println("Syöte oli väärä");
+                                System.out.println("Virheellinen soitinvalinta.");
                                 break;
                         }
                         if (newInstrument != null) {
@@ -54,7 +54,7 @@ public class App
                     break;
                 case 2:
                     if (instruments.isEmpty())  {
-                        System.out.println("Soittimia ei ole lisätty.");
+                        System.out.println("Ei lisättyjä soittimia.");
                         break;
                     } 
                     for (Instrument instrument : instruments) {
